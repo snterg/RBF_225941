@@ -102,5 +102,8 @@
     <Resource Include="4_class.png" />
     <Resource Include="5_class.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="27-нейромозг.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RBF"
         mc:Ignorable="d"
-        Title="Сеть РБФ Герасимов В.А." Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Сеть РБФ Герасимов В.А." Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="27-нейромозг.png">
    
     <Grid x:Name="grid">
         
