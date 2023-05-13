@@ -40,6 +40,14 @@
         <Image Source="5_class.png" Grid.Row="1" Grid.Column="4"/>
 
         <Button x:Name="gen_img" Content="Сгенерировать образцы" Grid.Column="0" Grid.Row="2" Click="gen_img_Click"/>
-
+        <Button x:Name="train" Content="Обучение" Grid.Column="1" Grid.Row="2" Click="train_click"/>
+        <Button x:Name="recognition" Content="Распознание" Grid.Column="2" Grid.Row="2" Click="recogn"/>
+        <Rectangle Grid.Row="3" Grid.Column="2" Fill="red"/>
+        <Image  Grid.Row="3" Grid.Column="2" />
+        <Label x:Name="similarity_1" Grid.Column="0" Grid.Row="5"/>
+        <Label x:Name="similarity_2" Grid.Column="1" Grid.Row="5"/>
+        <Label x:Name="similarity_3" Grid.Column="2" Grid.Row="5"/>
+        <Label x:Name="similarity_4" Grid.Column="3" Grid.Row="5"/>
+        <Label x:Name="similarity_5" Grid.Column="4" Grid.Row="5"/>
     </Grid>
 </Window>

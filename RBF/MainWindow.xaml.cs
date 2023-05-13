@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Color = System.Drawing.Color;
 
+
 namespace RBF
 {
     /// <summary>
@@ -42,10 +43,10 @@ namespace RBF
         {
             string name_file = name + "_frame_";
             Bitmap img;
-            for (int i = 0; i < 3; ++i)
+            for (int i = 0; i < 8; ++i)
             {
                 img = iteration(name);
-                img.Save(name_file+"_it_"+Convert.ToString(i)+ext, System.Drawing.Imaging.ImageFormat.Png);
+                img.Save("img\\"+name_file+"_it_"+Convert.ToString(i)+ext, System.Drawing.Imaging.ImageFormat.Png);
             }
            
         }
@@ -60,15 +61,17 @@ namespace RBF
             double prob;
             int w = new_image.Width;
             int h = new_image.Height;
-            for (int i = 0; i <w ; ++i)
+            for (int i = 0; i < w; ++i)
+            {
                 for (int j = 0; j < h; ++j)
                 {
                     //prob = (1/(2* Math.Sqrt(2*Math.PI))*Math.Exp(-(Math.Pow(j-3,2)/2*Math.Pow(i+j,2))));
-                    r = rnd.Next(0, 256);
-                   // new_color = prob>0.05&&(i+j)%2==0?Color.FromArgb(255, 0, 0, 0) : Color.FromArgb(0, 255, 255, 255);
-                    new_color =Color.FromArgb(255, r, r, r);
+                    r = rnd.Next(256);
+                    // new_color = prob>0.05&&(i+j)%2==0?Color.FromArgb(255, 0, 0, 0) : Color.FromArgb(0, 255, 255, 255);
+                    new_color = r%2==0? Color.FromArgb(255, 0, 0, 0) : Color.FromArgb(255, 255, 255, 255);
                     new_image.SetPixel(i, j, new_color);
                 }
+            }
             return new_image;
         }
 
@@ -82,6 +85,17 @@ namespace RBF
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+
+
+        private void recogn(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void train_click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
