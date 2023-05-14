@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RBF"
         mc:Ignorable="d"
-        Title="Сеть РБФ Герасимов В.А." Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="27-нейромозг.png">
+        Title="Сеть РБФ Герасимов В.А." Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="27-нейромозг.png" WindowState="Maximized">
    
     <Grid x:Name="grid">
         
@@ -25,29 +25,34 @@
         </Grid.RowDefinitions>
 
         <Label Content="1 класс" Grid.Row="0" Grid.Column="0"/>
-        <Image Source="1_class.png" Grid.Row="1" Grid.Column="0"/>
+        <Image Source="1.png" Grid.Row="1" Grid.Column="0"/>
 
         <Label Content="2 класс" Grid.Row="0" Grid.Column="1"/>
-        <Image Source="2_class.png" Grid.Row="1" Grid.Column="1"/>
+        <Image Source="2.png" Grid.Row="1" Grid.Column="1"/>
 
         <Label Content="3 класс" Grid.Row="0" Grid.Column="2"/>
-        <Image Source="3_class.png" Grid.Row="1" Grid.Column="2"/>
+        <Image Source="3.png" Grid.Row="1" Grid.Column="2"/>
 
         <Label Content="4 класс" Grid.Row="0" Grid.Column="3"/>
-        <Image Source="4_class.png" Grid.Row="1" Grid.Column="3"/>
+        <Image Source="4.png" Grid.Row="1" Grid.Column="3"/>
 
         <Label Content="5 класс" Grid.Row="0" Grid.Column="4"/>
-        <Image Source="5_class.png" Grid.Row="1" Grid.Column="4"/>
+        <Image Source="5.png" Grid.Row="1" Grid.Column="4"/>
 
         <Button x:Name="gen_img" Content="Сгенерировать образцы" Grid.Column="0" Grid.Row="2" Click="gen_img_Click"/>
         <Button x:Name="train" Content="Обучение" Grid.Column="1" Grid.Row="2" Click="train_click"/>
         <Button x:Name="recognition" Content="Распознание" Grid.Column="2" Grid.Row="2" Click="recogn"/>
+        
+        <Button x:Name="add" Content="Загрузить образец для распознания" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="3" Click="addition"/>
+        
         <Rectangle Grid.Row="3" Grid.Column="2" Fill="red"/>
-        <Image  Grid.Row="3" Grid.Column="2" />
-        <Label x:Name="similarity_1" Grid.Column="0" Grid.Row="5"/>
-        <Label x:Name="similarity_2" Grid.Column="1" Grid.Row="5"/>
-        <Label x:Name="similarity_3" Grid.Column="2" Grid.Row="5"/>
-        <Label x:Name="similarity_4" Grid.Column="3" Grid.Row="5"/>
-        <Label x:Name="similarity_5" Grid.Column="4" Grid.Row="5"/>
+        
+        <Image x:Name="exp"  Grid.Row="3" Grid.Column="2" />
+        
+        <Label x:Name="similarity_1" Grid.Column="0" Grid.Row="5" FontSize="18"/>
+        <Label x:Name="similarity_2" Grid.Column="1" Grid.Row="5"  FontSize="18"/>
+        <Label x:Name="similarity_3" Grid.Column="2" Grid.Row="5"  FontSize="18"/>
+        <Label x:Name="similarity_4" Grid.Column="3" Grid.Row="5"  FontSize="18"/>
+        <Label x:Name="similarity_5" Grid.Column="4" Grid.Row="5"  FontSize="18"/>
     </Grid>
 </Window>
